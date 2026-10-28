@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+html, body, [data-testid="stAppViewContainer"], .stMarkdown,
+p, label, h1, h2, h3, h4, button, input, textarea {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Restaurar la fuente de los íconos de Streamlit */
+[data-testid="stIconMaterial"],
+[data-testid="stIconMaterial"] *,
+span[class*="material"],
+.material-icons,
+.material-symbols-rounded,
+.material-symbols-outlined {
+  font-family: "Material Symbols Rounded", "Material Symbols Outlined", "Material Icons" !important;
+}
+
+.stApp {
+  background: #eef0f3 !important;
+}
+
+[data-testid="stHeader"] {
+  background: transparent !important;
+  height: 2.5rem;
+}
+
+[data-testid="stToolbar"],
+#MainMenu,
+footer,
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"] {
+  visibility: hidden;
+}
+
+/* Botón para abrir la barra lateral (versiones nuevas y antiguas) */
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="stExpandSidebarButton"],
+[data-testid="collapsedControl"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+[data-testid="stSidebar"] {
+  background: #ffffff !important;
+  border-right: 1px solid #ececec;
+}
+
+[data-testid="stSidebar"] > div:first-child {
+  padding: 18px 16px 12px 16px;
+}
+
+[data-testid="stSidebarNav"] {
+  display: none;
+}
+
+.block-container {
+  padding: 1.15rem 1.4rem 2rem 1.4rem !important;
+  max-width: 1400px !important;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px 18px 8px;
+  font-weight: 800;
+  font-size: 22px;
+  color: #111;
+  letter-spacing: -0.04em;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.nav-caption {
+  color: #9a9a9a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 10px 4px;
+}
+
+div[data-testid="stSidebar"] .stButton > button {
+  background: transparent;
+  color: #6b6b6b;
+  border: 0;
+  border-radius: 14px;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 11px 14px;
+  box-shadow: none;
+}
+
+div[data-testid="stSidebar"] .stButton > button:hover {
+  background: #f3f4f6;
+  color: #111;
+  border: 0;
+}
+
+div[data-testid="stSidebar"] .nav-active button {
+  background: #f2f3f5 !important;
+  color: #111 !important;
+}
+
+.upgrade-card {
+  background: #1c1c1c;
+  color: #fff;
+  border-radius: 22px;
+  padding: 18px 16px 16px;
+  margin: 18px 4px 8px;
+}
+
+.upgrade-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+}
+
+.upgrade-card p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #1a1a1a;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #ececec;
+  display: grid;
+  place-items: center;
+  color: #444;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2b2b2b, #7a7a7a);
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.kpi-card {
+  border-radius: 22px;
+  padding: 18px 20px 16px;
+  min-height: 118px;
+}
+
+.kpi-dark {
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.kpi-light {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ececec;
+}
+
+.kpi-label {
+  font-size: 13px;
+  color: #9b9b9b;
+  font-weight: 600;
+}
+
+.kpi-dark .kpi-label {
+  color: #c9c9c9;
+}
+
+.kpi-value {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-top: 10px;
+}
+
+.kpi-delta {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.kpi-delta.up { color: #16a34a; }
+.kpi-delta.down { color: #ef4444; }
+.kpi-delta.flat { color: #9a9a9a; }
+
+.panel {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 24px;
+  padding: 16px 18px 10px;
+}
+
+.panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.note {
+  background: #f6f7f9;
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: #666;
+  font-size: 13px;
+}
+
+.pill-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+div[data-testid="stHorizontalBlock"] {
+  gap: 0.7rem;
+}
+
+.stSelectbox, .stMultiSelect, .stSlider, .stTextInput {
+  margin-bottom: 0;
+}
+
+div[data-testid="stTextInput"] input,
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+div[data-testid="stNumberInput"] input {
+  border-radius: 999px !important;
+  background: #fff !important;
+  border: 1px solid #ececec !important;
+}
+
+.stDownloadButton > button,
+.stButton > button {
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #fff;
+  border: 0;
+  font-weight: 600;
+}
+
+.stDownloadButton > button:hover,
+.stButton > button:hover {
+  background: #333;
+  color: #fff;
+  border: 0;
+}
+
+[data-testid="stMetric"] {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 18px;
+  padding: 12px 14px;
+}
+
+[data-testid="stDataFrame"] {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.calendar-wrap {
+  padding: 8px 6px 4px;
+}
+
+.cal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cal-dow {
+  color: #9a9a9a;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
+.cal-day {
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #222;
+}
+
+.cal-day.muted { color: #c5c5c5; }
+.cal-day.today {
+  background: #1c1c1c;
+  color: #fff;
+  font-weight: 700;
+}
+
+.growth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 6px 12px;
+}
+
+.growth-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.growth-delta {
+  color: #16a34a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-paid {
+  background: #ececec;
+  color: #333;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer-note {
+  color: #8a8a8a;
+  font-size: 12px;
+  margin-top: 18px;
+}
